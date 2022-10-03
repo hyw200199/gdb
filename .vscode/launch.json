@@ -1,0 +1,36 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            //这个大括号里是我们调试（Degub）的配置
+            "name":"Debug",//配置名称
+            "type": "cppdbg",//配置类型，cppdbg对应cpptools提供的调试功能
+            "request": "launch",//请求配置类型，可以为launch（启动）或者attach
+            "stopAtEntry": false,
+            "preLaunchTask": "构建c2-test",
+            // "program": "/home/zhouzihong/hyw/gdb/test1/a.exe",
+            // "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/c2-test",
+            "args":[],//程序调试时传递给程序的命令行参数，这里设为空
+            "cwd":"${fileDirname}",//调试程序时的工作目录
+            "environment": [],//环境变量这里设置为空
+            "externalConsole": false,//为true时使用单独的cmd窗孔，跳出小黑框
+            "internalConsoleOptions": "neverOpen",//
+            "MIMode": "gdb",//指定连接的调试器，gdb时minGW中的调试程序
+            "miDebuggerPath": "/usr/bin/gdb",
+            // "preLaunchTask": "构建c2-test",
+            "setupCommands": [
+                {
+                    "description": "为gdb启用整齐打印",
+                    "text": "enable pretty print",
+                    "ignoreFailures": true
+                }
+            ]
+            // "debugStdLib": "true"
+
+        }
+    ]
+}

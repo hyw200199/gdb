@@ -1,0 +1,32 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            // "label": "C/C++: clang++ 生成活动文件",
+            // "command": "/bin/clang++",
+            // "args": [
+            //     "-fcolor-diagnostics",
+            //     "-fansi-escape-codes",
+            //     "-g",
+            //     "${file}",
+            //     "-o",
+            //     "${fileDirname}/${fileBasenameNoExtension}"
+            // ],
+            "label": "构建c2-test",//这里task的label必须和launch的preLaunchTask一样
+            "command": "./hywmake.sh",
+            "args": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
